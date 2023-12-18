@@ -1,8 +1,7 @@
 import React from 'react';
 import { useAllNotes } from '../contexts/notes';
 import NoteBox from '../components/NoteBox/NoteBox';
-import CreateNote from '../components/CreateNote/CreateNote';
-
+import { Link } from "react-router-dom";
 
 
 const Home: React.FC = () => {
@@ -10,6 +9,9 @@ const Home: React.FC = () => {
     const importantNotes = notes.filter(note => note.important);
     return (
         <div className=''>
+            <div className={'text-black menu-item text-xl hover:font-bold p-2'}>
+                <Link to={"/"}>Retour</Link>
+            </div>
             <h1 className='text-center'>Notes</h1>
             <div className='flex justify-center'>
                 <ul>
