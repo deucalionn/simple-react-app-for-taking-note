@@ -13,13 +13,18 @@ const Home: React.FC = () => {
             <div className={'text-black menu-item text-xl hover:font-bold p-2'}>
                 <Link to={"/important"}>Voir mes notes importantes</Link>
             </div>
-            <CreateNote/>
-            <h1 className='text-center'>Notes</h1>
             <div className='flex justify-center'>
-                <ul>
+                <CreateNote/>
+            </div>
+            <h1 className='text-center m-10 text-xl'>Notes</h1>
+            <div className='flex justify-center'>
+                <ul className='flex flex-wrap justify-center'>
                     {notes.map((note) => (
                         <NoteBox key={note.id} note={note}></NoteBox>
                     ))}
+                    {notes.length === 0 && (
+                        <p className='text-center'>Aucune note pour le moment</p>
+                    )}
                 </ul>
             </div>
         </div>

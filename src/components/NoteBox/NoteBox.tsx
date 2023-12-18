@@ -26,12 +26,15 @@ const NoteBox: React.FC<NoteBoxProps> = ({ note }) => {
 
 
     return (
-        <div className={`w-60 h-40 bg-${important ? 'yellow-500' : 'white'} border border-black rounded`}>
-            <h2 className='text-xl text-center'>{note.title}</h2>
-            <p className='text-lg text-center'>{note.description}</p>
-            <div className='mt-10'>
-                <button className='bg-red-500' onClick={handleDeleteNote}>Supprimer</button>
-                <button className='bg-yellow-500' onClick={handleMarqueAsImportant}>Marquer comme importante</button>
+        <div className={`w-60 h-auto p-2 bg-${important ? 'yellow-500' : 'white'} rounded  shadow-md hover:shadow-lg transition-transform transform scale-95 hover:scale-100`}>
+            <div className=''>
+                <h2 className='text-xl text-center'>{note.title}</h2>
+                <p className='text-base'>{note.description}</p>
+            </div>
+
+            <div className='mb-3 mt-10 flex grid grid-1-cols gap-2'>
+                <button className='border-2 border-red-500 p-2 rounded bg-white' onClick={handleDeleteNote}>Supprimer</button>
+                <button className='border-2 border-orange-400 p-2 rounded bg-white' onClick={handleMarqueAsImportant}>Marquer comme importante</button>
             </div>
         </div>
     );

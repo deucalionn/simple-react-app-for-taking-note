@@ -23,17 +23,17 @@ const CreateNote: React.FC = () => {
   };
 
   return (
-    <div className='p-2 border border-black rounded'>
+    <div className='p-2 border border-black rounded w-1/3'>
       <div className='grid grid-cols-2 gap-2'>
-        <div className='grid grid-cols-2 gap-3'>
+        <div className='grid grid-cols-1 gap-3'>
           <label>Titre :</label>
           <input className='border border-black rounded m-2'
             type='text'
             value={newNoteTitle}
             onChange={(e) => setNewNoteTitle(e.target.value)}
-        />
+          />
         </div>
-        <div className='grid grid-cols-2 gap-3'>
+        <div className='grid grid-cols-1 gap-3'>
           <label>Description :</label>
           <textarea className='border border-black rounded m-2'
             value={newNoteDescription}
