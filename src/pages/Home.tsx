@@ -18,7 +18,7 @@ const Home: React.FC = () => {
             <div className='flex justify-center'>
                 <ul>
                     {notes.map((note) => (
-                        <NoteBox note={note}></NoteBox>
+                        <NoteBox key={note.id} note={note}></NoteBox>
                     ))}
                 </ul>
             </div>
