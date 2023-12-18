@@ -11,7 +11,7 @@ const Home: React.FC = () => {
     return (
         <div className=''>
             <div className={'text-black menu-item text-xl hover:font-bold p-2'}>
-                <Link to={"/important"}>Notes importantes</Link>
+                <Link to={"/important"}>Voir mes notes importantes</Link>
             </div>
             <CreateNote/>
             <h1 className='text-center'>Notes</h1>
