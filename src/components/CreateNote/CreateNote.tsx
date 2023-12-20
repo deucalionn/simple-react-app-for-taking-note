@@ -27,7 +27,7 @@ const CreateNote: React.FC = () => {
       <div className='grid grid-cols-2 gap-2'>
         <div className='grid grid-cols-1 gap-3'>
           <label>Titre :</label>
-          <input className='border border-black rounded m-2'
+          <input aria-label='note-title' className='border border-black rounded m-2'
             type='text'
             value={newNoteTitle}
             onChange={(e) => setNewNoteTitle(e.target.value)}
@@ -35,7 +35,7 @@ const CreateNote: React.FC = () => {
         </div>
         <div className='grid grid-cols-1 gap-3'>
           <label>Description :</label>
-          <textarea className='border border-black rounded m-2'
+          <textarea aria-label='note-content' className='border border-black rounded m-2'
             value={newNoteDescription}
             onChange={(e) => setNewNoteDescription(e.target.value)}
           />
